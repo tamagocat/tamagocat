@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+/* variables
+---------------------------------------------------------------------------- */
+
+// color
+$white: #fff;
+$black: #444;
+$gray: #999;
+$gray2: #aaa;
+$light-gray: #ddd;
+$yellow: #feff57;
+$pale-yellow: #fafac8;
+$pale-orange: #ffefe5;
+$orange: #f4810b;
+$theme-red: #ff616f;
+$theme-gradient: to right, #ff4063 0%, #ff951c 100%;
+$bnr-gradient: to right, #ff80e3 0%, #05f 100%;
+
+$base-font-color: $black;
+$secondary-font-color: $gray;
+$accent-font-color: $yellow;
+
+$bg-color-white: $white;
+$bg-color-red: $theme-red;
+$bg-color-orange: $pale-orange;
+$bg-color-yellow: $pale-yellow;
+
+// width
+$base-width: 1400px;

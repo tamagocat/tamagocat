@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+/* breakpoint
+---------------------------------------------------------------------------- */
+$breakpoints: (
+  'xl': 'screen and (max-width: 2600px)',
+  'lg': 'screen and (max-width: 1920px)',
+  'md': 'screen and (max-width: 750px)',
+  'sm': 'screen and (max-width: 450px)',
+  'upxl': 'screen and (min-width: 2601px)',
+  'uplg': 'screen and (min-width: 1921px)',
+  'upmd': 'screen and (min-width: 751px)',
+  'upsm': 'screen and (min-width: 451px)'
+) !default;
+
+@mixin upxl($breakpoint: 'upxl') {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin uplg($breakpoint: 'uplg') {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin lg($breakpoint: 'lg') {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin pc($breakpoint: 'upmd') {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin sp($breakpoint: 'md') {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+/* breakpointでvwの変更に使用
+---------------------------------------------------------------------------- */
+$sp-width: 750;
+
+//sp用
+@function spn($num, $width: $sp-width) {
+  @return (1vw * $num / $width * 100);
+}
